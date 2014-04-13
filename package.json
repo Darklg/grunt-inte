@@ -1,0 +1,10 @@
+{
+  "name": "grunt-inte",
+  "version": "0.0.0",
+  "devDependencies": {
+    "grunt": "~0.4.4",
+    "grunt-gh-pages": "~0.9.1",
+    "grunt-jekyll": "~0.4.2",
+    "grunt-shell": "~0.6.4"
+  }
+}
