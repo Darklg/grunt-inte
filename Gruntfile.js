@@ -11,6 +11,17 @@ module.exports = function(grunt) {
             },
             dev: {}
         },
+        sass: {
+            dist: {
+                options: {
+                    compass: true,
+                    style: 'expanded'
+                },
+                files: {
+                    'build/assets/css/main.css': 'src/assets/_sass/main.scss'
+                }
+            }
+        },
         shell: {
             jekyll: {
                 command: 'jekyll build;'
@@ -22,8 +33,9 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-gh-pages');
     grunt.loadNpmTasks('grunt-jekyll');
     grunt.loadNpmTasks('grunt-shell');
+    grunt.loadNpmTasks('grunt-contrib-sass');
 
     // Tasks
-    grunt.registerTask('default', ['jekyll:dev']);
+    grunt.registerTask('default', ['jekyll:dev', 'sass']);
 
 };
